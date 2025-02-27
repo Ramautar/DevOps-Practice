@@ -1,17 +1,10 @@
-FROM node:20-alpine as base
+FROM node:23
 
-WORKDIR /src
-COPY package.json package-lock.json /src/
+WORKDIR /usr/src/app
+COPY /NodejS-backend/ .
+RUN npm install
+COPY . .
+
 EXPOSE 3000
 
-FROM base as production
-ENV NODE_ENV=production
-RUN npm ci
-COPY . /src
-CMD ["node", "index.js"]
-
-FROM base as dev
-ENV NODE_ENV=development
-RUN npm install -g nodemon && npm install
-COPY . /src
-CMD ["nodemon", "index.js"]
+CMD ["node", "app.js"]
