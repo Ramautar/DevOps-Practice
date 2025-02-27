@@ -1,7 +1,7 @@
 FROM node:23
 
 WORKDIR /usr/src/app
-COPY /NodejS-backend/ .
+COPY /nodejs/ .
 RUN npm install
 COPY . .
 
