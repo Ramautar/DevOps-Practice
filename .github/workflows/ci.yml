@@ -14,7 +14,7 @@ jobs:
       -  name: Checkout code
          uses: actions/checkout@v4
       
-      -  name: Run docker compose
+      -  name: Check service health
          uses: jaracogmbh/docker-compose-health-check-action@v1.0.0
          with:
           compose-file: "./docker-compose.yml"
