@@ -18,6 +18,8 @@ jobs:
          uses: hoverkraft-tech/compose-action@v2.0.1
          with:
           compose-file: "./docker-compose.yml"
+          max-retries: 30
+          retry-interval: 10
+          skip-exited: "true"
+          skip-no-healthcheck: "true"
          
-      -  name: Start Docker Compose services
-         run: docker-compose up -d
