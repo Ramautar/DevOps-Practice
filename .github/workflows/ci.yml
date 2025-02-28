@@ -13,14 +13,13 @@ jobs:
     steps:
       -  name: Checkout code
          uses: actions/checkout@v4
+         
+      -  name: Start Docker Compose services
+         run: docker-compose up -d
       
-      -  name: Run docker compose
-         uses: hoverkraft-tech/compose-action@v2.0.1
-         with:
-          compose-file: "./docker-compose.yml"
+      # -  name: Run docker compose
+      #    uses: hoverkraft-tech/compose-action@v2.0.1
+      #    with:
+      #     compose-file: "./docker-compose.yml"
 
-      #-  name: Run Super-Linter
-      #   uses: github/super-linter@v4
-      #   env:
-      #     DEFAULT_BRANCH:  main
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
