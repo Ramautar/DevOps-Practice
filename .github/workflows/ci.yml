@@ -21,5 +21,5 @@ jobs:
           max-retries: 30
           retry-interval: 10
           skip-exited: "true"
-          skip-no-healthcheck: "true"
+          skip-no-healthcheck: "false"
          
