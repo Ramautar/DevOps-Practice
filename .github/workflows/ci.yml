@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  super-lint:
+  build:
     name: Lint code base
     runs-on: ubuntu-latest
     steps:
