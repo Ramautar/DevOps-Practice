@@ -1,7 +1,4 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: Super-Linter
+name: CI Pipeline
 
 on:
   push:
@@ -16,6 +13,11 @@ jobs:
     steps:
       -  name: Checkout code
          uses: actions/checkout@v4
+      
+      -  name: Run docker compose
+         uses: hoverkraft-tech/compose-action@v2.0.1
+         with:
+          compose-file: "./docker/docker-compose.yml"
 
       #-  name: Run Super-Linter
       #   uses: github/super-linter@v4
