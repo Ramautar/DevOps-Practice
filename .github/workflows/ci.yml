@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Start CI Pipeline
+    name: Docker compose healt-check
     runs-on: ubuntu-latest
     steps:
       -  name: Checkout code
