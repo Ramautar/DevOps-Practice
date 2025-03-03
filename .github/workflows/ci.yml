@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  Continuous-Integration-pipeline:
 
     runs-on: ubuntu-latest
 
