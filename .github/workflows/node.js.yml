@@ -1,6 +1,5 @@
-name: Docker images CI
+name: CI Pipeline
 
-#Workflow Trigger
 on:
   push: 
     branches: ["main"]
