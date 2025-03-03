@@ -42,6 +42,10 @@ jobs:
         run: npm install
         continue-on-error: false
 
+      - name: Start application-specific services using Docker Compose
+        run: docker-compose up -d
+        continue-on-error: false  
+
     # steps:
     #   - uses: actions/checkout@v1
     #   - name: Build the docker-compose stack
