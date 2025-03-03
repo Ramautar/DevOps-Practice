@@ -8,9 +8,9 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkoutt@v4
-      - name: Step 1 
+      - name: test_1
       - run: docker-compose up -d
