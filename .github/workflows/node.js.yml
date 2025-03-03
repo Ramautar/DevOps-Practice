@@ -38,7 +38,9 @@ jobs:
         continue-on-error: false
 
       - name: Install dependencies
-        run: npm install
+        with:
+          file:  ./nodejs
+          run: npm install
         continue-on-error: false
 
     # steps:
