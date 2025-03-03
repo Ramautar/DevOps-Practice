@@ -13,3 +13,4 @@ jobs:
     steps:
       - uses: actions/checkoutt@v4
       - name: Step 1 
+      - run: docker-compose up -d
