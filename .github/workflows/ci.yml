@@ -52,4 +52,14 @@ jobs:
           retry-interval: 10
           compose-file: "docker-compose.yml"
           skip-exited: "true"
-          skip-no-healthcheck: "true"  
+          skip-no-healthcheck: "true"    
+  Continuos-Delivery-pipeline:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+        continue-on-error: false
