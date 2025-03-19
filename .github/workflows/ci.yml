@@ -54,7 +54,7 @@ jobs:
           skip-exited: "true"
           skip-no-healthcheck: "true"    
   Continuos-Delivery-pipeline:
-
+    needs: Continuous-Integration-pipeline
     runs-on: ubuntu-latest
 
     steps:
