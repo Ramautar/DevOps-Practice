@@ -53,7 +53,7 @@ jobs:
           compose-file: "docker-compose.yml"
           skip-exited: "true"
           skip-no-healthcheck: "true"    
-  Continuos-Delivery:
+  Continuous-Delivery:
     needs: Continuous-Integration
     runs-on: ubuntu-latest
 
