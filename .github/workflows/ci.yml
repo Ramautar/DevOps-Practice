@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
 jobs:
-  Continuous-Integration-pipeline:
+  Continuous-Integration:
 
     runs-on: ubuntu-latest
 
@@ -53,13 +53,13 @@ jobs:
           compose-file: "docker-compose.yml"
           skip-exited: "true"
           skip-no-healthcheck: "true"    
-  Continuos-Delivery-pipeline:
-    needs: Continuous-Integration-pipeline
+  Continuos-Delivery:
+    needs: Continuous-Integration
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-        continue-on-error: false
+    # steps:
+      # - name: Build and push Docker image
+        # uses: docker/build-push-action@v4
+        # with:
+        #   context: .
+        # continue-on-error: false
