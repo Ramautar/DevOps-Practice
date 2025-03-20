@@ -55,7 +55,7 @@ jobs:
           skip-no-healthcheck: "true"    
   Continuous-Delivery:
     needs: Continuous-Integration
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Check out code
