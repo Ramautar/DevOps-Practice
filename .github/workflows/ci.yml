@@ -57,6 +57,13 @@ jobs:
     needs: Continuous-Integration
     runs-on: ubuntu-latest
 
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Run docker-compose
+        run: docker-compose up -d
+
     # steps:
       # - name: Build and push Docker image
         # uses: docker/build-push-action@v4
