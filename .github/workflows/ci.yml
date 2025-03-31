@@ -56,8 +56,8 @@ jobs:
       - name: push image to docker hub
         run: |
           docker login -u radjes -p ${{ secrets.DOCKER_HUB_TOKEN}}
-          echo pwd
-          docker build . --file Dokerfile --tag webserver:latest
+          ls -l
+          docker build -t webserver:latest -f Dockerfile .
           docker push radjes /webserver:latest         
   Continuous-Delivery:
     needs: Continuous-Integration
