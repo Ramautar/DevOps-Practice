@@ -52,7 +52,13 @@ jobs:
           retry-interval: 10
           compose-file: "docker-compose.yml"
           skip-exited: "true"
-          skip-no-healthcheck: "true"    
+          skip-no-healthcheck: "true"
+      - name: push image to docker hub
+        run: |
+          docker login -u radjes -p ${{ secrets.DOCKER_HUB_TOKEN}}
+          cd webserver
+          docker build . --file Dokerfile --tag webserver:latest
+          docker push radjes /webserver:latest         
   Continuous-Delivery:
     needs: Continuous-Integration
     runs-on: self-hosted
