@@ -62,8 +62,10 @@ jobs:
 
       - name: push image to docker hub
         run: |
-          docker build -t webserver:latest -f Dockerfile .
-          docker push radjes /webserver:latest         
+          docker-compose build
+          IMAGE_NAME="radjes/webserver"
+          docker tag webserver $IMAGE_NAME 
+          docker push $IMAGE_NAME 
   
   Continuous-Delivery:
     needs: Continuous-Integration
