@@ -54,17 +54,10 @@ jobs:
           skip-exited: "true"
           skip-no-healthcheck: "true"
       - name: push image to docker hub
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: radjes/webserver:latest
-          file: docker-compose.yml   
-        # run: |
-        #   docker login -u radjes -p ${{ secrets.DOCKER_HUB_TOKEN}}
-        #   cd ./webserver
-        #   docker build -t webserver:latest -f Dockerfile .
-        #   docker push radjes /webserver:latest         
+        run: |
+          docker login -u radjes -p ${{ secrets.DOCKER_HUB_TOKEN}}
+          docker build -t webserver:latest -f Dockerfile .
+          docker push radjes /webserver:latest         
   Continuous-Delivery:
     needs: Continuous-Integration
     runs-on: self-hosted
