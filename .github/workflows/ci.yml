@@ -64,7 +64,7 @@ jobs:
         run: |
           docker-compose build
           IMAGE_NAME="radjes/devops-project:latest"
-          docker tag webserver $IMAGE_NAME 
+          docker tag devops-practice $IMAGE_NAME 
           docker push $IMAGE_NAME 
   
   Continuous-Delivery:
