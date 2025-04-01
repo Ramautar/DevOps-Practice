@@ -17,7 +17,7 @@ services:
       - proxy-tier
       
   webserver:
-    #container_name: webserver
+    container_name: webserver
     restart: always
     build:
       dockerfile: ./webserver/Dockerfile
