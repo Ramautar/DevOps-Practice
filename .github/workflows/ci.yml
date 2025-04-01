@@ -63,7 +63,7 @@ jobs:
       - name: push image to docker hub
         run: |
           docker-compose build
-          IMAGE_NAME="radjes/devops-project:latest"
+          IMAGE_NAME="radjes/webserver:latest"
           docker tag devops-practice_webserver $IMAGE_NAME 
           docker push $IMAGE_NAME 
   
