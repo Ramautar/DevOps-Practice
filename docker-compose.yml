@@ -33,7 +33,7 @@ services:
       timeout: 10s
       retries: 3
       start_period: 5s
-  nodejs:
+  jsapp:
     container_name: jsapp
     restart: always
     build:
