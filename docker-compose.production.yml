@@ -19,8 +19,7 @@ services:
   webserver:
     #container_name: webserver
     restart: always
-    build:
-      dockerfile: ./webserver/Dockerfile
+    image: radjes/webserver:latest
     environment:
       - TZ=Europe/Amsterdam
     volumes:
@@ -36,8 +35,7 @@ services:
   jsapp:
     #container_name: jsapp
     restart: always
-    build:
-      dockerfile: ./nodejs/Dockerfile
+    image: radjes/jsapp:latest
     environment:
       - TZ=Europe/Amsterdam
     networks:
