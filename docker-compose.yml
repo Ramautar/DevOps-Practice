@@ -17,7 +17,7 @@ services:
       - proxy-tier
       
   webserver:
-    container_name: webserver
+    #container_name: webserver
     restart: always
     build:
       dockerfile: ./webserver/Dockerfile
@@ -34,7 +34,7 @@ services:
       retries: 3
       start_period: 5s
   jsapp:
-    container_name: jsapp
+    #container_name: jsapp
     restart: always
     build:
       dockerfile: ./nodejs/Dockerfile
