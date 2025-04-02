@@ -50,7 +50,7 @@ jobs:
         with:
           max-retries: 30
           retry-interval: 10
-          compose-file: "docker-compose.yml"
+          compose-file: "docker-compose.development.yml"
           skip-exited: "true"
           skip-no-healthcheck: "true"
       
