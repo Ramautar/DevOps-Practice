@@ -96,7 +96,7 @@ jobs:
           name: static-site
       
       - name: Archive site content
-        uses: thedocter0/zip-release@master  
+        uses: thedoctor0/zip-release@master  
         with:
           filename: devops-project.zip
       
