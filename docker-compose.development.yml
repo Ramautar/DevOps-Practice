@@ -1,6 +1,6 @@
 services:  
   proxy-server:
-    container_name: proxy-server
+    #container_name: proxy-server
     restart: always
     image: nginx:latest
     environment:
