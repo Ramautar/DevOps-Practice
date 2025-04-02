@@ -42,7 +42,7 @@ jobs:
         continue-on-error: false
 
       - name: Start application-specific services using Docker Compose
-        run: docker-compose up -d
+        run: docker-compose -f docker-compose.development.yml up -d
         continue-on-error: false
 
       - name: Check service health
@@ -79,6 +79,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run docker-compose
-        run: docker-compose up -d
-
-        
+        run: docker-compose -f docker-compose.production.yml up -d
