@@ -82,14 +82,18 @@ jobs:
         run: docker-compose -f docker-compose.production.yml up -d
 
   Release-project:
+    name: Create Release
     needs: Continuous-Delivery
     runs-on: ubuntu-latest
       
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: static-site
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # - name: Download artifact
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: static-site
       
       - name: Archive site content
         uses: thedocter0/zip-release@master  
