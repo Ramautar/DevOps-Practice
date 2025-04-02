@@ -82,7 +82,7 @@ jobs:
         run: docker-compose -f docker-compose.production.yml up -d
 
   Release-project:
-
+    needs: Continuous-Delivery
     runs-on: ubuntu-latest
       
     steps:
